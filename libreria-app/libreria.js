@@ -33,6 +33,8 @@ const getBookStore = function () {
         card.innerHTML = `<img src="${libro.img}" class="card-img-top" alt="img-${libro.title}">`
 
         const cardText = document.createElement("div")
+        const cardButtonsDiv = document.createElement("div")
+        cardButtonsDiv.classList.add("d-flex", "justify-content-evenly")
         cardText.classList.add(
           "card-body",
           "d-flex",
@@ -90,9 +92,9 @@ const getBookStore = function () {
           booksStored.push(libro.title)
           sessionStorage.setItem("booksStored", JSON.stringify(booksStored))
         })
-
-        cardText.appendChild(buttonScarta)
-        cardText.appendChild(buttonCarrello)
+        cardText.appendChild(cardButtonsDiv)
+        cardButtonsDiv.appendChild(buttonScarta)
+        cardButtonsDiv.appendChild(buttonCarrello)
         card.appendChild(cardText)
         rowHtml.appendChild(card)
       })
