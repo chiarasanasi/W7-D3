@@ -12,7 +12,7 @@
     />
   </head>
   <body class="bg-dark">
-    <header>
+    <header id="header">
       <nav class="navbar navbar-expand-lg bg-info px-5">
         <div class="container-fluid">
           <a class="navbar-brand text-white fw-bold" href="#">BOOKS</a>
@@ -53,7 +53,13 @@
       ></div>
     </main>
     <footer class="text-center bg-info text-dark py-4">
-      <h1 class="text-white pb-3">CARRELLO</h1>
+      <div class="d-flex align-items-center justify-content-center pb-3">
+        <h1 class="text-white m-0">CARRELLO</h1>
+        <a href="#header" class="text-decoration-none fw-medium text-light mx-4"
+          >Home</a
+        >
+      </div>
+
       <div
         id="carrello"
         class="d-flex row-cols-3 row-cols-md-4 row-cols-lg-5 flex-wrap gap-4 justify-content-center"
